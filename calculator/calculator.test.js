@@ -33,3 +33,4 @@ test("calculator does default throw", () => {
     // we can test the error throwing function which passes if an error is thrown.
     expect(() => (calculate(3,"%", 4)).toThrow(new Error(`Unsupported operator %`)));
 });
+
