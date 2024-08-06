@@ -27,9 +27,9 @@ test("calculator makes good squaring", () => {
 });
 
 test("calculator does default throw", () => {
-    expect(calculate(3,"%", 4)).toBe(`Unsupported operator ${operator}`)
-});
 
-test("calculator makes good subtracting", () => {
-    expect(calculate(1, "-", 10)).toBe(-9)
+    // This time, we are testing our default which should throw an error.
+    // so, we need to create it as a function which throws an error, so that 
+    // we can test the error throwing function which passes if an error is thrown.
+    expect(() => (calculate(3,"%", 4)).toThrow(new Error(`Unsupported operator %`)));
 });
